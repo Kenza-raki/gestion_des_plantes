@@ -63,8 +63,8 @@ describe('Header', () => {
     expect(html).toContain('entity-menu');
     // Find AccountMenu component
     expect(html).toContain('account-menu');
-    // Ribbon
-    expect(html).toContain('ribbon');
+    // No Ribbon
+    expect(html).not.toContain('ribbon');
   });
 
   it('Renders a Header component in prod profile with LoadingBar, Navbar, Nav.', () => {

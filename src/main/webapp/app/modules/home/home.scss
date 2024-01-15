@@ -1,10 +1,121 @@
-/* ==========================================================================
-Main page styles
-========================================================================== */
-.hipster {
-  display: inline-block;
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+video {
   width: 100%;
-  height: 497px;
-  background: url('/content/images/jhipster_family_member_2.svg') no-repeat center top;
-  background-size: contain;
+  height: 85vh;
+  object-fit: cover;
+  border: none; /* Remove border from the video */
+}
+
+.transparent-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/content/images/b.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none; /* Remove border from the background image container */
+}
+
+.text-over-video {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px; // Adjust the font size as needed
+  color: #fff; // Set the text color
+  text-decoration: none; // Remove underline
+  background-color: rgba(0, 0, 0, 0.7); // Semi-transparent background
+  padding: 10px 20px; // Adjust padding as needed
+  border-radius: 5px; // Add rounded corners
+}
+
+/* Text content styles */
+.display-4 {
+  color: #008000; /* Dark green color for the title */
+}
+
+.lead {
+  color: #008000; /* Dark green color for the subtitle */
+}
+
+/* Alert styles */
+.alert-success {
+  background-color: #d4edda; /* Light green background for success alerts */
+  border-color: #c3e6cb; /* Border color for success alerts */
+  color: #155724; /* Dark green text color for success alerts */
+}
+
+.alert-warning {
+  background-color: #fff3cd; /* Light yellow background for warning alerts */
+  border-color: #ffeeba; /* Border color for warning alerts */
+  color: #856404; /* Dark yellow text color for warning alerts */
+}
+
+.alert-link {
+  color: #006400; /* Dark green color for alert links */
+}
+
+/* List styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Link styles */
+a {
+  color: #006400; /* Dark green color for links */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #008000; /* Dark green color for primary buttons */
+  border-color: #008000;
+  color: #fff; /* White text color for primary buttons */
+}
+
+.btn-primary:hover {
+  background-color: #006400; /* Darker green on hover for primary buttons */
+  border-color: #006400;
+}
+
+/* Form styles */
+.form-control {
+  border-color: #008000; /* Dark green border for form controls */
+}
+
+.form-control:focus {
+  border-color: #006400; /* Darker green border on focus for form controls */
+  box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.25); /* Adjust box shadow on focus */
+}
+.view-container .card {
+  padding: 0; /* Override the existing padding */
+}
+.modal-content-plant::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/content/images/login.png'); /* Replace with your plant image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8; /* Adjust the opacity as needed */
+  border-radius: 10px;
+  z-index: -1;
 }

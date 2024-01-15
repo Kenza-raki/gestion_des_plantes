@@ -1,9 +1,8 @@
 import React, { useLayoutEffect } from 'react';
-
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { logout } from 'app/shared/reducers/authentication';
 
-export const Logout = () => {
+const Logout = () => {
   const logoutUrl = useAppSelector(state => state.authentication.logoutUrl);
   const dispatch = useAppDispatch();
 
@@ -12,12 +11,27 @@ export const Logout = () => {
     if (logoutUrl) {
       window.location.href = logoutUrl;
     }
-  });
+  }, [dispatch, logoutUrl]);
 
   return (
-    <div className="p-5">
-      <h4>Logged out successfully!</h4>
-    </div>
+    <div
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundImage: "url('/content/images/logout.png')", // Replace with your image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: '#fff', // Set text color
+        fontSize: '24px',
+      }}
+    />
   );
 };
 
